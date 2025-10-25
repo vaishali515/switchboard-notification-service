@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to SwitchBoard</title>
+    <style>
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            max-width: 650px;
+            margin: 40px auto;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        }
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2563eb, #1e3a8a);
+            padding: 30px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+        .logo span {
+            color: #60a5fa;
+        }
+        .header h1 {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: 500;
+            color: #e5e7eb;
+        }
+        /* Content */
+        .content {
+            padding: 40px 35px;
+            text-align: left;
+            line-height: 1.6;
+        }
+        .content h2 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #1e3a8a;
+        }
+        .content p {
+            margin: 10px 0;
+            font-size: 15px;
+            color: #444;
+        }
+        /* Feature Cards */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 25px 0;
+        }
+        .card {
+            background: #f9fafb;
+            padding: 18px 20px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 10px;
+
+        }
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+            color: #111827;
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+        }
+        /* CTA Button */
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 25px;
+            transition: all 0.25s ease;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        /* Footer */
+        .footer {
+            background: #f9fafb;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            color: #6b7280;
+            line-height: 1.5;
+            border-top: 1px solid #e5e7eb;
+        }
+        .footer b {
+            color: #111827;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">Switch<span>Board</span></div>
+        <h1>Welcome to Your Productivity Hub</h1>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <h2>Hello <strong th:text="${fullName}">Achiever</strong> 👋</h2>
+        <p>We’re thrilled to have you with us! SwitchBoard is your all-in-one companion to learn, grow, and achieve your goals with focus and structure.</p>
+
+        <!-- Feature Cards -->
+        <div class="features">
+            <div class="card">
+                <h3>🗂 Workspace</h3>
+                <p>Break big goals into smaller, achievable tasks. Visualize your journey with an intuitive kanban-style flow.</p>
+            </div>
+            <div class="card">
+                <h3>🗺 Roadmap</h3>
+                <p>Plan smarter with personalized and AI-generated roadmaps designed for your success.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 AI Mock Interviews</h3>
+                <p>Practice with realistic AI-driven mock interviews to sharpen your skills and confidence.</p>
+            </div>
+            <div class="card">
+                <h3>💼 Personalised Portfolio</h3>
+                <p>Showcase your journey, projects, and achievements in one beautiful, personalized portfolio.</p>
+            </div>
+        </div>
+
+        <p>Click below to explore your dashboard and begin your journey with SwitchBoard.</p>
+        <a href="#" class="btn">Go to Dashboard</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>You received this email because you signed up on <b>SwitchBoard</b>.</p>
+        <p>If you didn’t request this, you can safely ignore this email.</p>
+    </div>
+</div>
+</body>
+</html>
